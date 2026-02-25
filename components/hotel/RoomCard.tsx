@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import Link from "next/link"
 import { LucideIcon } from "lucide-react"
 
 interface RoomFeature {
@@ -50,12 +51,13 @@ export default function RoomCard({
             <span className="text-2xl md:text-3xl font-bold text-amber-600">${price}</span>
             <span className="text-slate-600">/noche</span>
           </div>
-          <Button className="bg-slate-800 hover:bg-slate-900 text-white w-full sm:w-auto">
-            Reservar
+          <Button asChild className="bg-slate-800 hover:bg-slate-900 text-white w-full sm:w-auto">
+            <Link href={{ pathname: "/reservar", query: { habitacion: title, precio: String(price) } }}>
+              Reservar
+            </Link>
           </Button>
         </div>
       </CardContent>
     </Card>
   )
 }
-

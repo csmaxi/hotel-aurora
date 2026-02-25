@@ -41,7 +41,9 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white">Reservar Ahora</Button>
+            <Button asChild className="bg-amber-600 hover:bg-amber-700 text-white">
+              <Link href="/reservar">Reservar Ahora</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,8 +69,10 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white mt-4">
-              Reservar Ahora
+            <Button asChild className="w-full bg-amber-600 hover:bg-amber-700 text-white mt-4">
+              <Link href="/reservar" onClick={() => setIsMenuOpen(false)}>
+                Reservar Ahora
+              </Link>
             </Button>
           </div>
         )}
@@ -76,4 +80,3 @@ export default function Navigation() {
     </nav>
   )
 }
-
