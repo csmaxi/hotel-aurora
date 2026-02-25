@@ -27,7 +27,7 @@ export default function Navigation() {
             <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="text-xl md:text-2xl font-serif text-slate-800">Hotel Aurora</span>
+            <span className="text-xl md:text-2xl font-serif text-slate-800">Hotel</span>
           </Link>
 
           {/* Desktop Navigation */}
